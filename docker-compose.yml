@@ -1,0 +1,10 @@
+version: '3.0'
+
+services:
+  grafana:
+    image: grafana/grafana-enterprise
+    restart: always
+    ports:
+      - 3000:3000
+    environment:
+      - GF_INSTALL_PLUGINS=grafana-clock-panel,grafana-simple-json-datasource,alexanderzobnin-zabbix-app
